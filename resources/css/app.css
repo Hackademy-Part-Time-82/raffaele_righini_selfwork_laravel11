@@ -27,6 +27,13 @@
     background: linear-gradient(135deg, var(--bs-primary), var(--bs-indigo));
 }
 
+/* Versione più piccola dell'avatar, usata nelle card della lista autori */
+.author-avatar-sm {
+    width: 72px;
+    height: 72px;
+    font-size: 1.5rem;
+}
+
 .author-empty {
     border: 2px dashed var(--bs-border-color);
 }

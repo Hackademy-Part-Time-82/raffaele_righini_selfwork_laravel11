@@ -13,7 +13,8 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        $authors = Author::all();
+        // withCount aggiunge ad ogni autore il campo books_count (numero dei suoi libri)
+        $authors = Author::withCount('books')->get();
         return view('authors.index', ['authors'=> $authors]);
     }
 
