@@ -1,0 +1,32 @@
+@import 'bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Card dei libri: al passaggio del mouse si alzano leggermente e l'ombra si accentua.
+   Si usa "top" e non "transform": un transform sulla card intrappolerebbe la modale
+   (position: fixed) dentro la card invece di farla aprire al centro della finestra. */
+.book-card {
+    top: 0;
+    transition: top .2s, box-shadow .2s;
+}
+
+.book-card:hover {
+    top: -4px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+/* Pagina dettaglio autore: fascia colorata in alto, avatar con le iniziali
+   e riquadro tratteggiato quando l'autore non ha ancora libri. */
+.author-hero {
+    background: linear-gradient(180deg, rgba(var(--bs-primary-rgb), .15), transparent);
+}
+
+.author-avatar {
+    width: 96px;
+    height: 96px;
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--bs-primary), var(--bs-indigo));
+}
+
+.author-empty {
+    border: 2px dashed var(--bs-border-color);
+}
